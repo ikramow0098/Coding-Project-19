@@ -1,6 +1,8 @@
 // src/components/Gallery.tsx
 import { useEffect, useState } from "react";
 import TourCard from "./TourCard";
+import { tours as tourData } from "../data";
+
 
 type Tour = {
   id: string;
@@ -21,22 +23,10 @@ export default function Gallery({ tours, setTours, onRemove }: Props) {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch("https://course-api.com/react-tours-project")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to fetch");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setTours(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Failed to fetch tours", error);
-        setLoading(false);
-      });
-    }, []);
+    setTours(tourData);
+    setLoading(false);
+  }, []);
+  
     if (loading) {
       return <main><h2>Loading...</h2></main>;
     }
