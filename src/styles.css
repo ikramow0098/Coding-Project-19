@@ -1,0 +1,40 @@
+/* styles.css */
+.gallery {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tour-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tour-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.tour-info {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tour-price {
+  color: #49a6e9;
+}
+
+.delete-btn {
+  background: #f28b82;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}

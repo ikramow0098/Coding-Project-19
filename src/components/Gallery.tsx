@@ -32,21 +32,20 @@ export default function Gallery({ tours, setTours, onRemove }: Props) {
         setTours(data);
         setLoading(false);
       })
-      .catch((err) => {
-        setError(true);
+      .catch((error) => {
+        console.error("Failed to fetch tours", error);
         setLoading(false);
-        console.error(err);
       });
-  }, [setTours]);
-
-  if (loading) return <h2>Loading...</h2>;
-  if (error) return <h2>Error loading tours</h2>;
-
-  return (
-    <section>
-      {tours.map((tour) => (
-        <TourCard key={tour.id} {...tour} onRemove={onRemove} />
-      ))}
-    </section>
-  );
-}
+    }, []);
+    if (loading) {
+      return <main><h2>Loading...</h2></main>;
+    }
+    
+    return (
+      <section className="gallery">
+        {tours.map((tour) => (
+          <TourCard key={tour.id} {...tour} onRemove={onRemove} />
+        ))}
+      </section>
+    );
+  }    
