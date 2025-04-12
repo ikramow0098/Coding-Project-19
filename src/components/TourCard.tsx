@@ -1,5 +1,7 @@
 // src/components/TourCard.tsx
-import React, { useState, type FC } from "react";
+import React, { useState } from "react";
+import type { FC } from "react";
+
 
 import "./styles.css";
 
