@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import type { FC } from "react";
 
 
-import "./styles.css";
+import "../styles.css";
 
 type Props = {
   id: string;
@@ -39,3 +39,5 @@ const TourCard: FC<Props> = ({ id, name, info, price, image, onRemove }) => {
     </article>
   );  
 }
+export default TourCard;
+
