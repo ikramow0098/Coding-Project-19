@@ -27,7 +27,7 @@ const TourCard: FC<Props> = ({ id, name, info, price, image, onRemove }) => {
         <p>
           {readMore ? info : `${info.substring(0, 100)}...`}
           <button onClick={() => setReadMore(!readMore)}>
-            {readMore ? " Show Less" : " Read More"}
+            {readMore ? "Show Less" : "Read More"}
           </button>
         </p>
         <button className="delete-btn" onClick={() => onRemove(id)}>
@@ -35,7 +35,5 @@ const TourCard: FC<Props> = ({ id, name, info, price, image, onRemove }) => {
         </button>
       </footer>
     </article>
-  );
-};
-
-export default TourCard;
+  );  
+}
