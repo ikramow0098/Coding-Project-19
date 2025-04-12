@@ -1,7 +1,7 @@
 // src/App.tsx
 
 import { useState } from "react";
-import Gallery from "./components/Gallery";  // ✅ Fixed import path
+import Gallery from "./components/Gallery";
 import "./styles.css";
 
 export default function App() {
